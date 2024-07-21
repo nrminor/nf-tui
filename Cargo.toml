@@ -1,0 +1,19 @@
+[package]
+name = "nf-tui"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+ratatui = "0.27.0"
+clap = { version = "4.4.3", features = ["derive", "cargo"] }
+color-eyre = "0.6.3"
+sccache = "0.8.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = "symbols"

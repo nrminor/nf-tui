@@ -1,0 +1,16 @@
+# nftui.toml specifies pipeline-specific rules for any parameter where invalid
+# input could cause the pipeline to crash. For example, if a parameter must
+# be a path to file that exists, you can specify a rule here that will be
+# checked against any user input for that parameter.
+#
+# nftui.toml also allows nf-tui to check user inputs for process directives as
+# well. Like with params, process rules are entirely optional; by default, no
+# rules are passed.
+
+[project]
+main = "main.nf"
+config = "nextflow.config"
+
+[params]
+
+[process]
